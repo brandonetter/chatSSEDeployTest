@@ -3,6 +3,9 @@ import longPoll, { poller, PollLogger } from 'nextcomet';
 import dbConnect from '@/utils/mongoConnect';
 import ChatModel from '@/models/ChatModel';
 export const dynamic = 'force-dynamic';
+export const config = {
+  runtime: 'edge',
+};
 export async function GET() {
   await dbConnect(); // connect to your DB
 
